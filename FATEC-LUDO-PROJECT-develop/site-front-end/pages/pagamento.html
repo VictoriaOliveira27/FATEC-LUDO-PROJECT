@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <style>
+        /* Estilo do modal */
+        #ad-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #ad-content {
+            position: relative;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 80%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #ad-content img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        #close-ad {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img id="logo" src="../assets/logo.png" alt="Logo do Site">
+    <div id="login-card">
+        <div class="icon-container">
+            <i class="bi bi-arrow-left-square-fill" onclick="goBack()"></i>
+            <i class="bi bi-x-square-fill" onclick="goBack()"></i>
+        </div>
+        <h1>Pagamento</h1>
+        <input type="text" placeholder="Número do Cartão">
+        <input type="text" placeholder="Nome Impresso no Cartão">
+        <input type="text" placeholder="Vencimento">
+        <input type="text" placeholder="CVV">
+        <p class="subtitle">Valor</p>
+        <button type="button" onclick="openModal()">Comprar</button>
+    </div>
+    <div id="confirmation-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Confirmação de Pagamento</h2>
+            <p>Tem certeza de que deseja concluir o pagamento?</p>
+            <button onclick="confirmPayment()">Confirmar</button>
+            <button onclick="closeModal()">Cancelar</button>
+        </div>
+    </div>
+
+    <!-- Modal de propaganda -->
+    <div id="ad-modal">
+        <div id="ad-content">
+            <button id="close-ad">&times;</button>
+            <img src="../assets/modal3.png" alt="Propaganda">
+        </div>
+    </div>
+
+    <script>
+        // Funções do modal de pagamento
+        function openModal() {
+            const confirmationModal = document.getElementById("confirmation-modal");
+            confirmationModal.style.display = "block";
+        }
+
+        function closeModal() {
+            const confirmationModal = document.getElementById("confirmation-modal");
+            confirmationModal.style.display = "none";
+        }
+
+        function confirmPayment() {
+            alert("Pagamento confirmado!");
+            closeModal();
+        }
+
+        // Exibir o modal de propaganda
+        document.addEventListener("DOMContentLoaded", function () {
+            const adModal = document.getElementById("ad-modal");
+            const closeAdButton = document.getElementById("close-ad");
+
+            // Exibe o modal de propaganda após 500ms
+            setTimeout(() => {
+                adModal.style.display = "flex";
+            }, 500);
+
+            // Fecha o modal de propaganda
+            closeAdButton.addEventListener("click", () => {
+                adModal.style.display = "none";
+            });
+        });
+    </script>
+</body>
+</html>

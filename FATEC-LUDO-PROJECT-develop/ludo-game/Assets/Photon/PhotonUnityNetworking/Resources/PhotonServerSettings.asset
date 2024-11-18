@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f3758f8f58fdef43803eb9be1df0608, type: 3}
+  m_Name: PhotonServerSettings
+  m_EditorClassIdentifier: 
+  AppSettings:
+    AppIdRealtime: 3f689bcc-4e38-4a4c-91e7-f930dde7e8fb
+    AppIdFusion: 
+    AppIdChat: 
+    AppIdVoice: 
+    AppVersion: 
+    UseNameServer: 1
+    FixedRegion: 
+    Server: 
+    Port: 0
+    ProxyServer: 
+    Protocol: 0
+    EnableProtocolFallback: 1
+    AuthMode: 0
+    EnableLobbyStatistics: 0
+    NetworkLogging: 1
+  DevRegion: sa
+  PunLogging: 0
+  EnableSupportLogger: 0
+  RunInBackground: 1
+  StartInOfflineMode: 0
+  RpcList:
+  - ClickRpc
+  - DestroyRpc
+  - DestroySpaceship
+  - Fire
+  - RespawnSpaceship
+  - CapturePiece
+  - greenPlayerI_UI
+  - greenPlayerII_UI
+  - greenPlayerIII_UI
+  - greenPlayerIV_UI
+  - HandleWin
+  - InitializeDice
+  - MovePlayerPieceRPC
+  - redPlayerI_UI
+  - redPlayerII_UI
+  - redPlayerIII_UI
+  - redPlayerIV_UI
+  - SetInitialTurn
+  - SyncDiceRoll
+  - SyncTurn
+  - UpdateGreenPlayerI_ColName
+  - UpdateGreenPlayerII_ColName
+  - UpdateGreenPlayerIII_ColName
+  - UpdateGreenPlayerIV_ColName
+  - UpdateRedPlayerI_ColName
+  - UpdateRedPlayerII_ColName
+  - UpdateRedPlayerIII_ColName
+  - UpdateRedPlayerIV_ColName
+  - AssignTurn
+  - DiceRollResult
+  - InitializeGame
+  - MoveGreenPlayerI
+  - MoveGreenPlayerII
+  - MoveGreenPlayerIII
+  - MoveGreenPlayerIV
+  - MoveRedPlayerI
+  - MoveRedPlayerII
+  - MoveRedPlayerIII
+  - MoveRedPlayerIV
+  - PlayersNotInitialized
+  - StartGameCompletedRoutine
+  - SyncGameState
+  - CompletePlayersNotInitialized
+  - StartPlayersNotInitialized
+  - SincronizarEstadoJogo
+  - SyncPlayersState
+  - SyncDiceState
+  - PlayMovementAnimation
+  - SYNCPLAYERSTATE
+  DisableAutoOpenWizard: 1
+  ShowSettings: 0
+  DevRegionSetOnce: 1

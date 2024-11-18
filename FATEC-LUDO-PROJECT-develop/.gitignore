@@ -1,0 +1,10 @@
+site-back-end/obj
+site-back-end/bin
+ludo-game/Library
+ludo-game/Temp
+ludo-game/Logs
+ludo-game/UserSettings
+launch.json
+tasks.json
+node_modules
+ludo-game/UserSettings/EditorUserSettings.asset

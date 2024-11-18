@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lojinha</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <style>
+        /* Estilo para o modal de propaganda */
+        #ad-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #ad-content {
+            position: relative;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 80%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #ad-content img {
+            max-width: 300px; /* Define a largura máxima da imagem */
+            height: auto;     /* Mantém a proporção */
+            border-radius: 10px;
+        }
+
+        #close-ad {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="store-card">
+        <div class="icon-container">
+            <i class="bi bi-arrow-left-square-fill" onclick="goBack()"></i>
+            <i class="bi bi-x-square-fill" onclick="goBack()"></i>
+        </div>
+        <div class="top-bar">
+            <div>
+                <input type="text" placeholder="buscar">
+            </div>
+            <p class="coin-balance">28 Coins <i class="bi bi-coin"></i></p>
+        </div>
+        <h1>MEUS ITENS</h1>
+        <div class="item-grid">
+            <div class="item">
+                <a href="detalhes-aldeao.html">
+                    <img src="../assets/Aldeao/sprite_Peao_Aldeao_Vermelho.png" alt="Pacote do Aldeão">
+                    <p>Pacote do Aldeão</p>
+                </a>
+            </div>
+            <div class="item">
+                <a href="detalhes-arqueiro.html">
+                    <img src="../assets/Arqueiro/sprite_Peao_Arqueiro_Amarelo.png" alt="Pacote do Arqueiro">
+                    <p>Pacote do Arqueiro</p>
+                </a>
+            </div>
+            <div class="item">
+                <a href="detalhes-dragao.html">
+                    <img src="../assets/Dragao/sprite_Peao_Dragao_Azul.png" alt="Pacote do Dragão">
+                    <p>Pacote do Dragão</p>
+                </a>
+            </div>
+            <div class="item">
+                <a href="detalhes-mago.html">
+                    <img src="../assets/Mago/sprite_Peao_Mago_Verde.png" alt="Pacote do Mago">
+                    <p>Pacote do Mago</p>
+                </a>
+            </div>
+        </div>
+        <a href="loja.html" class="archive-button">Ir para a Lojinha</a>
+    </div>
+
+    <!-- Modal de propaganda -->
+    <div id="ad-modal">
+        <div id="ad-content">
+            <button id="close-ad">&times;</button>
+            <img src="../assets/modal3.png" alt="Propaganda">
+        </div>
+    </div>
+
+    <script>
+        // Script para mostrar e fechar o modal de propaganda
+        document.addEventListener("DOMContentLoaded", function () {
+            const adModal = document.getElementById("ad-modal");
+            const closeAdButton = document.getElementById("close-ad");
+
+            // Exibe a propaganda ao carregar a página
+            setTimeout(() => {
+                adModal.style.display = "flex";
+            }, 500); // Tempo de 500ms para exibir
+
+            // Fecha a propaganda ao clicar no botão
+            closeAdButton.addEventListener("click", () => {
+                adModal.style.display = "none";
+            });
+        });
+    </script>
+</body>
+</html>
